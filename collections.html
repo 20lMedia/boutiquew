@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Elegance Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Elegance</h1>
+                <p>PREMIUM INDIAN BOUTIQUE</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="collections.html" class="active">Collections</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search"><i class="fas fa-search"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Notification -->
+    <div class="cart-notification">
+        <i class="fas fa-check-circle"></i>
+        <div class="cart-notification-content">
+            <h4>Item Added to Cart</h4>
+            <p>Your item has been added to the cart.</p>
+        </div>
+        <button class="close-notification">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>Our Collections</h1>
+            <p>Discover our exquisite range of handcrafted Indian fashion</p>
+        </div>
+    </section>
+
+    <section class="collection-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All Collections</button>
+                <button class="category-tab" data-category="sarees">Sarees</button>
+                <button class="category-tab" data-category="lehengas">Lehengas</button>
+                <button class="category-tab" data-category="fusion">Fusion Wear</button>
+                <button class="category-tab" data-category="accessories">Accessories</button>
+            </div>
+
+            <div class="collection-grid">
+                <!-- Sarees -->
+                <div class="collection-item" data-category="sarees">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b" alt="Banarasi Silk Saree">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Banarasi Silk Saree</h3>
+                        <p>Traditional handwoven silk</p>
+                        <span class="price">₹12,500</span>
+                        <button class="btn add-to-cart-btn" data-id="1" data-name="Banarasi Silk Saree" data-price="12500" data-image="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b" data-category="sarees">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="collection-item" data-category="sarees">
+                    <div class="collection-image">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRoaCoCJuY8ectEMup78kyvn2ReWv8p3qE8siPX-Q1e5iE2pE6HDDOFm5ka663p1KiXg70hoWN4YSpktvQTRa926Gcc2eSYm6e5If2Dcew" alt="Kanjivaram Silk Saree">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Kanjivaram Silk Saree</h3>
+                        <p>South Indian bridal classic</p>
+                        <span class="price">₹18,900</span>
+                        <button class="btn add-to-cart-btn" data-id="2" data-name="Kanjivaram Silk Saree" data-price="18900" data-image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRoaCoCJuY8ectEMup78kyvn2ReWv8p3qE8siPX-Q1e5iE2pE6HDDOFm5ka663p1KiXg70hoWN4YSpktvQTRa926Gcc2eSYm6e5If2Dcew" data-category="sarees">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="collection-item" data-category="sarees">
+                    <div class="collection-image">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRznnACXapDfSQ4NzMsDid2zrJoBpYkB3LgS2IJG-9vcSq1PBWc3WKvrgKpV1muDvuR865IyfTrf6af2R8QLKvt8rjPkr1Sa2_VxUt_RlPYKHuyyHz55R_lBw" alt="Chanderi Cotton Saree">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Chanderi Cotton Saree</h3>
+                        <p>Lightweight elegance</p>
+                        <span class="price">₹8,750</span>
+                        <button class="btn add-to-cart-btn" data-id="3" data-name="Chanderi Cotton Saree" data-price="8750" data-image="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRznnACXapDfSQ4NzMsDid2zrJoBpYkB3LgS2IJG-9vcSq1PBWc3WKvrgKpV1muDvuR865IyfTrf6af2R8QLKvt8rjPkr1Sa2_VxUt_RlPYKHuyyHz55R_lBw" data-category="sarees">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Lehengas -->
+                <div class="collection-item" data-category="lehengas">
+                    <div class="collection-image">
+                        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQNVyjYxohwMxxYNWPLUgO_IHiYPqcMWecMQLb1Fkzy-ecsaNaY2V4Tn-IjxQRNteB-ugOCxxiBEgO2c48b_5NknTceqbPRBLjHx7lVZ90" alt="Bridal Lehenga">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Royal Bridal Lehenga</h3>
+                        <p>Hand-embroidered with zari work</p>
+                        <span class="price">₹45,000</span>
+                        <button class="btn add-to-cart-btn" data-id="4" data-name="Royal Bridal Lehenga" data-price="45000" data-image="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQNVyjYxohwMxxYNWPLUgO_IHiYPqcMWecMQLb1Fkzy-ecsaNaY2V4Tn-IjxQRNteB-ugOCxxiBEgO2c48b_5NknTceqbPRBLjHx7lVZ90" data-category="lehengas">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="collection-item" data-category="lehengas">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1583396060233-3d13dbadf242" alt="Designer Lehenga">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Contemporary Lehenga</h3>
+                        <p>Modern silhouette with traditional embroidery</p>
+                        <span class="price">₹32,500</span>
+                        <button class="btn add-to-cart-btn" data-id="5" data-name="Contemporary Lehenga" data-price="32500" data-image="https://images.unsplash.com/photo-1583396060233-3d13dbadf242" data-category="lehengas">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="collection-item" data-category="lehengas">
+                    <div class="collection-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSFdaGvfOzUGUyuee-ueXp2X15E-wA0Ndp5Fi0mUbukEhfFW79rHiYtvhbwRfHovr43kqwr2wLGJ2HS-ar8CFDlv08cZz-JwohzrItTzQ8" alt="Festive Lehenga">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Festive Lehenga</h3>
+                        <p>Perfect for celebrations</p>
+                        <span class="price">₹28,750</span>
+                        <button class="btn add-to-cart-btn" data-id="6" data-name="Festive Lehenga" data-price="28750" data-image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSFdaGvfOzUGUyuee-ueXp2X15E-wA0Ndp5Fi0mUbukEhfFW79rHiYtvhbwRfHovr43kqwr2wLGJ2HS-ar8CFDlv08cZz-JwohzrItTzQ8" data-category="lehengas">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Fusion Wear -->
+                <div class="collection-item" data-category="fusion">
+                    <div class="collection-image">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQeFGu1yB1ya_PlE3QND1NydQk4KmZdYW_GX8qzrR-Ycu4VPexEIp1gDlPM9QwS3PiDB5JQJolTg-7pScBsi3nyfLZGRyMIx8gosPHAcDiqWA1cZp1vgzH5AA" alt="Indo-Western Gown">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Indo-Western Gown</h3>
+                        <p>Contemporary fusion design</p>
+                        <span class="price">₹16,500</span>
+                        <button class="btn add-to-cart-btn" data-id="7" data-name="Indo-Western Gown" data-price="16500" data-image="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQeFGu1yB1ya_PlE3QND1NydQk4KmZdYW_GX8qzrR-Ycu4VPexEIp1gDlPM9QwS3PiDB5JQJolTg-7pScBsi3nyfLZGRyMIx8gosPHAcDiqWA1cZp1vgzH5AA" data-category="fusion">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="collection-item" data-category="fusion">
+                    <div class="collection-image">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQo3IEL434c3ZW-YwkqPF7RfXo7a_bD7isS5NQ6WloRjT0bnhlD517FPU9CX6XTkwhkp5ggO_giP0QAithusR13X8WKmEx9XJ58S45Nvg_r" alt="Palazzo Set">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Designer Palazzo Set</h3>
+                        <p>Comfort meets style</p>
+                        <span class="price">₹9,800</span>
+                        <button class="btn add-to-cart-btn" data-id="8" data-name="Designer Palazzo Set" data-price="9800" data-image="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQo3IEL434c3ZW-YwkqPF7RfXo7a_bD7isS5NQ6WloRjT0bnhlD517FPU9CX6XTkwhkp5ggO_giP0QAithusR13X8WKmEx9XJ58S45Nvg_r" data-category="fusion">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Accessories -->
+                <div class="collection-item" data-category="accessories">
+                    <div class="collection-image">
+                        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQZK07nqMbuh0QkdiEOy1P_AAB88LLNXZudFkMSYSAmgd57El9J209alUO8l0Au8aM8O2inimYpksmRdD2mjwh069ikJpwUVNWRUfQek32JaxmCpGmFSJmg" alt="Kundan Jewelry Set">
+                        <div class="collection-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Kundan Jewelry Set</h3>
+                        <p>Traditional bridal jewelry</p>
+                        <span class="price">₹22,500</span>
+                        <button class="btn add-to-cart-btn" data-id="9" data-name="Kundan Jewelry Set" data-price="22500" data-image="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQZK07nqMbuh0QkdiEOy1P_AAB88LLNXZudFkMSYSAmgd57El9J209alUO8l0Au8aM8O2inimYpksmRdD2mjwh069ikJpwUVNWRUfQek32JaxmCpGmFSJmg" data-category="accessories">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="collection-item" data-category="accessories">
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Mailing List</h2>
+            <p>Be the first to know about new collections, exclusive offers, and boutique events.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn primary-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Elegance</h2>
+                <p>PREMIUM INDIAN BOUTIQUE</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <a href="collections.html">New Arrivals</a>
+                    <a href="collections.html">Sarees</a>
+                    <a href="collections.html">Lehengas</a>
+                    <a href="collections.html">Fusion Wear</a>
+                    <a href="collections.html">Accessories</a>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <a href="about.html">Our Story</a>
+                    <a href="about.html">Craftsmanship</a>
+                    <a href="about.html">Sustainability</a>
+                    <a href="about.html">Careers</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Care</h3>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">Shipping & Returns</a>
+                    <a href="#">Size Guide</a>
+                    <a href="#">FAQs</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p>Visit Our Store</p>
+                    <address>
+                        123 Fashion Street, <br>
+                        Indiranagar, Bangalore, <br>
+                        Karnataka, India 560038
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegance Boutique. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Cart functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cart variables
+            let cart = [];
+            let cartCount = 0;
+
+            // Get cart from localStorage if it exists
+            if (localStorage.getItem('eleganceCart')) {
+                try {
+                    cart = JSON.parse(localStorage.getItem('eleganceCart'));
+                    updateCartCount();
+                } catch (e) {
+                    console.error('Error loading cart from localStorage:', e);
+                    localStorage.removeItem('eleganceCart');
+                    cart = [];
+                }
+            }
+
+            // Add cart count badge to shopping bag icon in navigation
+            const shoppingBagIcon = document.querySelector('.nav-icons a[href="cart.html"]');
+            if (shoppingBagIcon) {
+                const cartCountBadge = document.createElement('span');
+                cartCountBadge.className = 'cart-count';
+                shoppingBagIcon.style.position = 'relative';
+                shoppingBagIcon.appendChild(cartCountBadge);
+                
+                // Update the badge with the current cart count
+                if (cartCount > 0) {
+                    cartCountBadge.textContent = cartCount;
+                    cartCountBadge.classList.add('show');
+                }
+            }
+
+            // Add to cart button click event
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            const cartNotification = document.querySelector('.cart-notification');
+            const closeNotification = document.querySelector('.close-notification');
+
+            if (addToCartButtons.length > 0) {
+                addToCartButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        const productId = this.getAttribute('data-id');
+                        const productName = this.getAttribute('data-name');
+                        const productPrice = parseFloat(this.getAttribute('data-price'));
+                        const productImage = this.getAttribute('data-image');
+                        const productCategory = this.getAttribute('data-category');
+
+                        if (!productId || !productName || isNaN(productPrice) || !productImage || !productCategory) {
+                            console.error('Invalid product data', { 
+                                id: productId, 
+                                name: productName, 
+                                price: productPrice, 
+                                image: productImage,
+                                category: productCategory
+                            });
+                            return;
+                        }
+
+                        // Check if product already exists in cart (compare as strings)
+                        const existingItemIndex = cart.findIndex(item => item.id === productId);
+
+                        if (existingItemIndex !== -1) {
+                            // Increase quantity if already in cart
+                            cart[existingItemIndex].quantity += 1;
+                            console.log(`Increased quantity for ${productName} to ${cart[existingItemIndex].quantity}`);
+                        } else {
+                            // Add new item to cart
+                            const newItem = {
+                                id: productId,
+                                name: productName,
+                                price: productPrice,
+                                image: productImage,
+                                category: productCategory,
+                                quantity: 1
+                            };
+                            cart.push(newItem);
+                            console.log(`Added new item to cart: ${productName}`);
+                        }
+
+                        // Save cart to localStorage
+                        try {
+                            localStorage.setItem('eleganceCart', JSON.stringify(cart));
+                            console.log('Cart saved to localStorage', cart);
+                        } catch (e) {
+                            console.error('Error saving cart to localStorage:', e);
+                        }
+
+                        // Update cart count badge
+                        updateCartCount();
+
+                        // Show notification
+                        showNotification(productName);
+                    });
+                });
+            } else {
+                console.warn('No Add to Cart buttons found on page');
+            }
+
+            // Close notification when clicking the close button
+            if (closeNotification) {
+                closeNotification.addEventListener('click', function() {
+                    hideNotification();
+                });
+            }
+
+            // Function to update cart count
+            function updateCartCount() {
+                cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+                
+                const cartCountBadge = document.querySelector('.cart-count');
+                if (cartCountBadge) {
+                    cartCountBadge.textContent = cartCount;
+                    
+                    if (cartCount > 0) {
+                        cartCountBadge.classList.add('show');
+                    } else {
+                        cartCountBadge.classList.remove('show');
+                    }
+                }
+            }
+
+            // Function to show notification
+            function showNotification(productName) {
+                if (!cartNotification) return;
+                
+                const notificationContent = cartNotification.querySelector('p');
+                if (notificationContent) {
+                    notificationContent.textContent = `${productName} has been added to your cart.`;
+                }
+                
+                cartNotification.classList.add('show');
+                
+                // Hide notification after 3 seconds
+                setTimeout(hideNotification, 3000);
+            }
+
+            // Function to hide notification
+            function hideNotification() {
+                if (!cartNotification) return;
+                cartNotification.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Elegance Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Elegance</h1>
+                <p>PREMIUM INDIAN BOUTIQUE</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search"><i class="fas fa-search"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html" class="active"><i class="fas fa-shopping-bag"></i></a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>Your Shopping Cart</h1>
+            <p>Review and checkout your selected items</p>
+        </div>
+    </section>
+
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-container">
+                <div class="cart-header">
+                    <div class="cart-row cart-heading">
+                        <div class="cart-col product-info">Product</div>
+                        <div class="cart-col product-price">Price</div>
+                        <div class="cart-col product-quantity">Quantity</div>
+                        <div class="cart-col product-total">Total</div>
+                        <div class="cart-col product-remove"></div>
+                    </div>
+                </div>
+                
+                <div class="cart-items">
+                    <!-- Cart items will be loaded dynamically from localStorage -->
+                </div>
+
+                <div class="cart-footer">
+                    <div class="cart-actions">
+                        <a href="collections.html" class="btn secondary-btn">Continue Shopping</a>
+                        <button class="btn secondary-btn update-cart">Update Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span class="summary-label">Subtotal</span>
+                    <span class="summary-value">₹45,000</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Shipping</span>
+                    <span class="summary-value">Free</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Tax (5%)</span>
+                    <span class="summary-value">₹2,250</span>
+                </div>
+                <div class="summary-row total">
+                    <span class="summary-label">Total</span>
+                    <span class="summary-value">₹47,250</span>
+                </div>
+                
+                <div class="promo-code">
+                    <h3>Promo Code</h3>
+                    <div class="promo-input">
+                        <input type="text" placeholder="Enter promo code">
+                        <button class="btn secondary-btn">Apply</button>
+                    </div>
+                </div>
+                
+                <button class="btn primary-btn checkout-btn">Proceed to Checkout</button>
+                
+                <div class="payment-methods">
+                    <p>We accept:</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommendations">
+        <div class="container">
+            <div class="section-header">
+                <h2>You May Also Like</h2>
+                <p>Curated recommendations based on your selections</p>
+            </div>
+            <div class="recommendation-grid">
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="https://5.imimg.com/data5/ANDROID/Default/2021/1/UO/FJ/XJ/28522267/product-jpeg-500x500.jpg" alt="Handloom Saree">
+                        <div class="recommendation-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="recommendation-info">
+                        <h3>Handloom Saree</h3>
+                        <p>Elegant silk blend</p>
+                        <span class="price">₹8,900</span>
+                    </div>
+                </div>
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="https://www.lashkaraa.com/cdn/shop/products/G2G-BLUSH-PINK-ANARKALI-LEHENGA_grande.jpg" alt="Festive Anarkali">
+                        <div class="recommendation-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="recommendation-info">
+                        <h3>Festive Anarkali</h3>
+                        <p>Intricate embroidery</p>
+                        <span class="price">₹18,500</span>
+                    </div>
+                </div>
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="https://www.tarinika.com/cdn/shop/products/6V9A3387copy_900x.jpg" alt="Kundan Jewelry">
+                        <div class="recommendation-overlay">
+                            <a href="#" class="btn overlay-btn">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="recommendation-info">
+                        <h3>Kundan Jewelry Set</h3>
+                        <p>Traditional craftsmanship</p>
+                        <span class="price">₹22,500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Mailing List</h2>
+            <p>Be the first to know about new collections, exclusive offers, and boutique events.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn primary-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Elegance</h2>
+                <p>PREMIUM INDIAN BOUTIQUE</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <a href="collections.html">New Arrivals</a>
+                    <a href="collections.html">Sarees</a>
+                    <a href="collections.html">Lehengas</a>
+                    <a href="collections.html">Fusion Wear</a>
+                    <a href="collections.html">Accessories</a>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <a href="about.html">Our Story</a>
+                    <a href="about.html">Craftsmanship</a>
+                    <a href="about.html">Sustainability</a>
+                    <a href="about.html">Careers</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Care</h3>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">Shipping & Returns</a>
+                    <a href="#">Size Guide</a>
+                    <a href="#">FAQs</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p>Visit Our Store</p>
+                    <address>
+                        123 Fashion Street, <br>
+                        Indiranagar, Bangalore, <br>
+                        Karnataka, India 560038
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegance Boutique. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Cart functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get DOM elements
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const cartContainer = document.querySelector('.cart-container');
+            const subtotalValue = document.querySelector('.summary-row:nth-child(1) .summary-value');
+            const taxValue = document.querySelector('.summary-row:nth-child(3) .summary-value');
+            const totalValue = document.querySelector('.summary-row.total .summary-value');
+            const updateCartBtn = document.querySelector('.update-cart');
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            const promoBtn = document.querySelector('.promo-input button');
+            
+            // Load cart from localStorage
+            let cart = [];
+            try {
+                if (localStorage.getItem('eleganceCart')) {
+                    cart = JSON.parse(localStorage.getItem('eleganceCart'));
+                    console.log('Cart loaded from localStorage:', cart);
+                    
+                    if (!Array.isArray(cart)) {
+                        console.error('Cart is not an array:', cart);
+                        cart = [];
+                        localStorage.removeItem('eleganceCart');
+                    }
+                    
+                    // Display cart items
+                    displayCartItems();
+                } else {
+                    console.log('No cart found in localStorage');
+                    // Show empty cart message
+                    showEmptyCart();
+                }
+            } catch (e) {
+                console.error('Error loading cart from localStorage:', e);
+                localStorage.removeItem('eleganceCart');
+                cart = [];
+                showEmptyCart();
+            }
+            
+            // Function to display cart items
+            function displayCartItems() {
+                if (!cartItemsContainer) {
+                    console.error('Cart items container not found');
+                    return;
+                }
+                
+                if (cart.length === 0) {
+                    console.log('Cart is empty, showing empty cart message');
+                    showEmptyCart();
+                    return;
+                }
+                
+                console.log('Displaying', cart.length, 'items in cart');
+                
+                // Clear existing cart items
+                cartItemsContainer.innerHTML = '';
+                
+                // Add each item to the cart
+                cart.forEach((item, index) => {
+                    try {
+                        // Validate item data
+                        if (!item.id || !item.name || isNaN(item.price) || !item.image || !item.category) {
+                            console.warn('Invalid item data:', item);
+                            return;
+                        }
+                        
+                        const cartRow = document.createElement('div');
+                        cartRow.className = 'cart-row';
+                        cartRow.innerHTML = `
+                            <div class="cart-col product-info">
+                                <div class="product-image">
+                                    <img src="${item.image}" alt="${item.name}">
+                                </div>
+                                <div class="product-details">
+                                    <h3>${item.name}</h3>
+                                    <p>${getCategoryDescription(item.category)}</p>
+                                    <p class="product-size">Size: ${item.category === 'sarees' ? 'Free Size' : 'M'}</p>
+                                </div>
+                            </div>
+                            <div class="cart-col product-price">₹${item.price.toLocaleString()}</div>
+                            <div class="cart-col product-quantity">
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn decrease" role="button" aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="${item.quantity}" min="1" max="5" class="quantity-input" data-index="${index}" aria-label="Quantity">
+                                    <button class="quantity-btn increase" role="button" aria-label="Increase quantity">+</button>
+                                </div>
+                            </div>
+                            <div class="cart-col product-total">₹${(item.price * item.quantity).toLocaleString()}</div>
+                            <div class="cart-col product-remove">
+                                <button class="remove-btn" data-index="${index}" aria-label="Remove item"><i class="fas fa-times"></i></button>
+                            </div>
+                        `;
+                        cartItemsContainer.appendChild(cartRow);
+                        console.log(`Added item to cart display: ${item.name}`);
+                    } catch (e) {
+                        console.error(`Error adding item ${index} to cart display:`, e);
+                    }
+                });
+                
+                // Add event listeners to the new elements
+                setupEventListeners();
+                
+                // Update cart summary
+                updateCartSummary();
+            }
+            
+            // Get category description
+            function getCategoryDescription(category) {
+                const descriptions = {
+                    'sarees': 'Traditional handwoven silk',
+                    'lehengas': 'Modern silhouette with traditional embroidery',
+                    'fusion': 'Contemporary fusion design',
+                    'accessories': 'Traditional craftsmanship'
+                };
+                
+                return descriptions[category] || 'Premium quality product';
+            }
+            
+            // Setup event listeners for dynamic elements
+            function setupEventListeners() {
+                try {
+                    // Quantity decrease buttons
+                    const decreaseBtns = document.querySelectorAll('.decrease');
+                    decreaseBtns.forEach(btn => {
+                        // Handle click events
+                        btn.addEventListener('click', function() {
+                            handleDecreaseQuantity(this);
+                        });
+                        
+                        // Handle touch events for better mobile experience
+                        btn.addEventListener('touchstart', function(e) {
+                            e.preventDefault();
+                            handleDecreaseQuantity(this);
+                        });
+                    });
+                    
+                    // Quantity increase buttons
+                    const increaseBtns = document.querySelectorAll('.increase');
+                    increaseBtns.forEach(btn => {
+                        // Handle click events
+                        btn.addEventListener('click', function() {
+                            handleIncreaseQuantity(this);
+                        });
+                        
+                        // Handle touch events for better mobile experience
+                        btn.addEventListener('touchstart', function(e) {
+                            e.preventDefault();
+                            handleIncreaseQuantity(this);
+                        });
+                    });
+                    
+                    // Handle quantity decrease
+                    function handleDecreaseQuantity(button) {
+                        const input = button.nextElementSibling;
+                        let value = parseInt(input.value);
+                        if (value > 1) {
+                            input.value = value - 1;
+                            const index = input.getAttribute('data-index');
+                            updateItemTotal(index);
+                        }
+                    }
+                    
+                    // Handle quantity increase
+                    function handleIncreaseQuantity(button) {
+                        const input = button.previousElementSibling;
+                        let value = parseInt(input.value);
+                        if (value < 5) {
+                            input.value = value + 1;
+                            const index = input.getAttribute('data-index');
+                            updateItemTotal(index);
+                        }
+                    }
+                    
+                    // Quantity inputs
+                    const quantityInputs = document.querySelectorAll('.quantity-input');
+                    quantityInputs.forEach(input => {
+                        input.addEventListener('change', function() {
+                            let value = parseInt(this.value);
+                            if (value < 1) this.value = 1;
+                            if (value > 5) this.value = 5;
+                            const index = this.getAttribute('data-index');
+                            updateItemTotal(index);
+                        });
+                    });
+                    
+                    // Remove buttons
+                    const removeBtns = document.querySelectorAll('.remove-btn');
+                    removeBtns.forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            handleRemoveItem(this);
+                        });
+                        
+                        btn.addEventListener('touchstart', function(e) {
+                            e.preventDefault();
+                            handleRemoveItem(this);
+                        });
+                    });
+                    
+                    // Handle remove item
+                    function handleRemoveItem(button) {
+                        const index = button.getAttribute('data-index');
+                        if (index === null || index === undefined) {
+                            console.error('Remove button has no data-index attribute');
+                            return;
+                        }
+                        
+                        const cartRow = button.closest('.cart-row');
+                        if (!cartRow) {
+                            console.error('Could not find cart row to remove');
+                            return;
+                        }
+                        
+                        cartRow.classList.add('removing');
+                        console.log(`Removing item at index ${index}`);
+                        
+                        setTimeout(() => {
+                            try {
+                                // Remove from cart array
+                                cart.splice(index, 1);
+                                // Save updated cart to localStorage
+                                localStorage.setItem('eleganceCart', JSON.stringify(cart));
+                                console.log('Cart updated in localStorage after removal');
+                                
+                                // Refresh display
+                                displayCartItems();
+                                
+                                // Check if cart is empty
+                                if (cart.length === 0) {
+                                    showEmptyCart();
+                                }
+                            } catch (e) {
+                                console.error('Error removing item from cart:', e);
+                            }
+                        }, 300);
+                    }
+                } catch (e) {
+                    console.error('Error setting up event listeners:', e);
+                }
+            }
+            
+            // Update item total
+            function updateItemTotal(index) {
+                try {
+                    if (index === null || index === undefined) {
+                        console.error('Invalid index for updating item total');
+                        return;
+                    }
+                    
+                    const quantityInput = document.querySelector(`.quantity-input[data-index="${index}"]`);
+                    if (!quantityInput) {
+                        console.error(`Quantity input not found for index ${index}`);
+                        return;
+                    }
+                    
+                    const quantity = parseInt(quantityInput.value);
+                    if (isNaN(quantity)) {
+                        console.error(`Invalid quantity value: ${quantityInput.value}`);
+                        return;
+                    }
+                    
+                    // Update the cart array
+                    if (!cart[index]) {
+                        console.error(`Item not found in cart at index ${index}`);
+                        return;
+                    }
+                    
+                    cart[index].quantity = quantity;
+                    console.log(`Updated quantity for ${cart[index].name} to ${quantity}`);
+                    
+                    // Update the displayed total
+                    const cartRow = quantityInput.closest('.cart-row');
+                    if (!cartRow) {
+                        console.error('Could not find cart row for updating total');
+                        return;
+                    }
+                    
+                    const price = cart[index].price;
+                    const total = price * quantity;
+                    const totalElement = cartRow.querySelector('.product-total');
+                    if (totalElement) {
+                        totalElement.innerText = `₹${total.toLocaleString()}`;
+                    }
+                    
+                    // Save updated cart to localStorage
+                    localStorage.setItem('eleganceCart', JSON.stringify(cart));
+                    console.log('Cart updated in localStorage');
+                    
+                    // Update cart summary
+                    updateCartSummary();
+                } catch (e) {
+                    console.error('Error updating item total:', e);
+                }
+            }
+            
+            // Update cart summary
+            function updateCartSummary() {
+                try {
+                    if (!subtotalValue || !taxValue || !totalValue) {
+                        console.error('Summary elements not found');
+                        return;
+                    }
+                    
+                    let subtotal = 0;
+                    
+                    cart.forEach(item => {
+                        if (item && !isNaN(item.price) && !isNaN(item.quantity)) {
+                            subtotal += item.price * item.quantity;
+                        }
+                    });
+                    
+                    const tax = subtotal * 0.05;
+                    const total = subtotal + tax;
+                    
+                    subtotalValue.innerText = `₹${subtotal.toLocaleString()}`;
+                    taxValue.innerText = `₹${tax.toLocaleString()}`;
+                    totalValue.innerText = `₹${total.toLocaleString()}`;
+                    
+                    // Update document title to show cart count
+                    const cartCount = cart.reduce((total, item) => {
+                        return total + (item.quantity || 0);
+                    }, 0);
+                    document.title = `Cart (${cartCount}) - Elegance Boutique`;
+                    console.log(`Cart summary updated: Subtotal: ₹${subtotal}, Tax: ₹${tax}, Total: ₹${total}`);
+                } catch (e) {
+                    console.error('Error updating cart summary:', e);
+                }
+            }
+            
+            // Show empty cart message
+            function showEmptyCart() {
+                try {
+                    if (!cartContainer) {
+                        console.error('Cart container not found');
+                        return;
+                    }
+                    
+                    const emptyCartMessage = document.createElement('div');
+                    emptyCartMessage.className = 'empty-cart-message';
+                    emptyCartMessage.innerHTML = `
+                        <div class="empty-cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h2>Your cart is empty</h2>
+                        <p>Looks like you haven't added any items to your cart yet.</p>
+                        <a href="collections.html" class="btn primary-btn">Browse Collections</a>
+                    `;
+                    
+                    if (cartItemsContainer) {
+                        cartItemsContainer.innerHTML = '';
+                    }
+                    
+                    cartContainer.innerHTML = '';
+                    cartContainer.appendChild(emptyCartMessage);
+                    
+                    // Update summary if elements exist
+                    if (subtotalValue) subtotalValue.innerText = '₹0';
+                    if (taxValue) taxValue.innerText = '₹0';
+                    if (totalValue) totalValue.innerText = '₹0';
+                    
+                    // Update document title
+                    document.title = `Cart - Elegance Boutique`;
+                    console.log('Displayed empty cart message');
+                } catch (e) {
+                    console.error('Error showing empty cart message:', e);
+                }
+            }
+            
+            // Update cart when clicking update button
+            if (updateCartBtn) {
+                updateCartBtn.addEventListener('click', function() {
+                    updateCartSummary();
+                    alert('Cart updated successfully!');
+                });
+            }
+            
+            // Checkout functionality
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', function() {
+                    if (cart.length > 0) {
+                        alert('Proceeding to checkout...');
+                        // In a real implementation, this would redirect to a checkout page
+                    } else {
+                        alert('Your cart is empty. Please add items before checking out.');
+                    }
+                });
+            }
+            
+            // Promo code functionality
+            if (promoBtn) {
+                promoBtn.addEventListener('click', function() {
+                    const promoInput = document.querySelector('.promo-input input');
+                    if (!promoInput) return;
+                    
+                    const code = promoInput.value.trim().toUpperCase();
+                    
+                    if (code === 'ELEGANCE10') {
+                        // Apply 10% discount
+                        alert('Promo code applied! 10% discount has been applied to your order.');
+                        
+                        // Calculate discounted total
+                        let subtotal = 0;
+                        cart.forEach(item => {
+                            subtotal += item.price * item.quantity;
+                        });
+                        
+                        const discount = subtotal * 0.1;
+                        const discountedSubtotal = subtotal - discount;
+                        const tax = discountedSubtotal * 0.05;
+                        const total = discountedSubtotal + tax;
+                        
+                        // Create discount row if it doesn't exist
+                        if (!document.querySelector('.summary-row.discount')) {
+                            const discountRow = document.createElement('div');
+                            discountRow.className = 'summary-row discount';
+                            discountRow.innerHTML = `
+                                <span class="summary-label">Discount (10%)</span>
+                                <span class="summary-value">-₹${discount.toLocaleString()}</span>
+                            `;
+                            
+                            // Insert before tax row
+                            const taxRow = document.querySelector('.summary-row:nth-child(3)');
+                            if (taxRow && taxRow.parentNode) {
+                                taxRow.parentNode.insertBefore(discountRow, taxRow);
+                            }
+                        } else {
+                            // Update existing discount row
+                            const discountValue = document.querySelector('.summary-row.discount .summary-value');
+                            if (discountValue) {
+                                discountValue.innerText = `-₹${discount.toLocaleString()}`;
+                            }
+                        }
+                        
+                        // Update tax and total
+                        if (taxValue) taxValue.innerText = `₹${tax.toLocaleString()}`;
+                        if (totalValue) totalValue.innerText = `₹${total.toLocaleString()}`;
+                        
+                        // Disable promo input
+                        promoInput.disabled = true;
+                        promoBtn.disabled = true;
+                    } else if (code === '') {
+                        alert('Please enter a valid promo code.');
+                    } else {
+                        alert('Invalid promo code. Please try again.');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
